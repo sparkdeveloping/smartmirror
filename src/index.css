@@ -1,13 +1,190 @@
 body {
-  margin: 0;
+  margin: 1.5rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.white {
+  color: white;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  color: white;
+  background-color: white;
+  height: 0.05rem;
+  width: 100%;
+  margin: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.subheading {
+  font-weight: 800;
+  opacity: 0.5;
+  margin-top: 1rem;
+}
+
+.text { 
+font-weight: 400;
+margin-bottom: 0.3rem;
+
+}
+.date-time {
+  position: absolute;
+    top: 0;
+}
+.time-main {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.time {
+  font-size: 6rem;
+  font-weight: 800;
+}
+
+.seconds {
+font-size: 3.8rem;
+margin-bottom: 0.4rem;
+font-weight: 200;
+}
+
+.date {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.t {
+  transform: translate(-50%, -50%)
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  perspective: 700px;
+    object-fit: cover;
+}
+
+.bg {
+
+  position: relative;
+  perspective: 700px;
+width: 100%;
+  height: 80vh
+}
+.gl {
+  transform: rotateY(30deg);
+left: -50%
+}
+.gr {
+  transform: rotateY(-30deg);
+  right: -50%;
+}
+.glass-bg {
+  position: absolute;
+    object-fit: cover;
+
+  backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(19px) saturate(200%);
+    background-color: rgba(86, 86, 86, 0.524);
+
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.197);
+
+    height: 80vh;
+    width: 80%;
+        border-radius: 3rem;
+    top: 10%;
+    transition: 0.5s;
+}
+
+.glass-bg:hover {
+  transform: rotateY(0);
+  z-index: 90;
+  width: 80%;
+  left: 10%;
+    right: 10%;
+  transition: 0.4s;
+}
+
+.logo2 {
+  position: absolute;
+
+object-fit: contain;
+
+
+top: 50%;
+left: 50%;
+}
+
+.c-axis {
+    position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.dp {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  width: 15rem;
+  /* height: 4rem; */
+    transform: translate(-50%, -50%);
+}
+
+.compliment {
+
+}
+
+.shadow {
+filter: drop-shadow(1px 1px 15px #000);
+}
+
+.fading-text {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fading-text.show {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 1;
+  position: absolute;
+  top: 70%;
+  left: 38%;
+}
+
+            
+.compliment {
+  color: white;
+  font-size: 6rem;
+  font-weight: 100;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
