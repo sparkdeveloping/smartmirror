@@ -69,11 +69,13 @@ function App() {
       setMirrorData(snapshot.val());
       console.log("mirror 3", mirrorData, "-", mirror, mirror === undefined);
       console.log("mirror 3", snapshot.val().isStandBy);
+
       if (snapshot.val().isStandBy === false) {
+        // alert("hey there");
         setfStand(false);
         setTimeout(() => {
           update(mirrorRef, {
-            isStandBy: false,
+            isStandBy: true,
           });
         }, 5000);
       } else {
